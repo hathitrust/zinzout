@@ -27,4 +27,18 @@ RSpec.describe Zinzout do
     expect(Zinzout.zin(gz).first.chomp).to eq('one')
   end
 
+  it "works with Pathnames, too" do
+    tplain, tgz = tempfile_pair
+    gz_path = Pathname.new(tgz)
+    Zinzout.zout(gz_path) do |out|
+      out.puts "one"
+    end
+
+    # Is it really gzipped?
+    expect(Zlib::GzipReader.open(gz_path.to_s).first.chomp).to eq("one")
+
+    # Is it sniffed correctly?
+    expect(Zinzout.zin(gz_path).first.chomp).to eq('one')
+  end
+
 end

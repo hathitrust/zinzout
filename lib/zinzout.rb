@@ -31,7 +31,7 @@ module Zinzout
       if filename.nil?
         ZinStdin.new
       else
-        ZinFile.new(filename, encoding)
+        ZinFile.new(filename.to_s, encoding)
       end
     end
   end
@@ -41,7 +41,7 @@ module Zinzout
       if filename.nil?
         ZoutStdout.new
       else
-        ZoutFile.new(filename, encoding)
+        ZoutFile.new(filename.to_s, encoding)
       end
     end
   end
