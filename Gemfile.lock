@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    zinzout (0.1.0)
+    zinzout (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -31,4 +31,4 @@ DEPENDENCIES
   zinzout!
 
 BUNDLED WITH
-   2.1.4
+   2.2.16

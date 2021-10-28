@@ -68,7 +68,7 @@ module Zinzout
   class ZoutFile < ZinFile
     def io_from_file(filename, encoding)
       if /\.gz\Z/.match(filename)
-        Zlib::GzipWriter.open(filename, encoding: encoding)
+        Zlib::GzipWriter.open(filename, nil, nil, encoding: encoding)
       else
         File.open(filename, 'w', encoding: encoding)
       end
