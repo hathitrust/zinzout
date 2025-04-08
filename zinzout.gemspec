@@ -3,11 +3,11 @@ require_relative 'lib/zinzout/version'
 Gem::Specification.new do |spec|
   spec.name          = "zinzout"
   spec.version       = Zinzout::VERSION
-  spec.authors       = ["Bill Dueber"]
-  spec.email         = ["bill@dueber.com"]
+  spec.authors       = ["Bill Dueber", "Aaron Elkiss"]
+  spec.email         = ["bill@dueber.com", "aelkiss@hathitrust.org"]
 
   spec.summary       = %q{Transparently open gzipped files for input/output}
-  spec.homepage      = "https://github.com/billdueber/zinzout"
+  spec.homepage      = "https://github.com/hathitrust/zinzout"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
